@@ -1,0 +1,129 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Silent Windows - By Team Silent</title>
+		<link href="layout.css" rel="stylesheet" type="text/css">
+		<link href="lib/os-gui/layout.css" rel="stylesheet" type="text/css">
+		<link href="lib/os-gui/windows-98.css" rel="stylesheet" type="text/css">
+		<link href="lib/clippy.js/build/clippy.css" rel="stylesheet" type="text/css">
+		<link href="classic.css" rel="stylesheet" type="text/css">
+		<link rel="apple-touch-icon" sizes="180x180" href="/fav/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/fav/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/fav/favicon-16x16.png">
+		<link rel="manifest" href="/site.webmanifest?v=LbWArJzeO7">
+		<link rel="mask-icon" href="/safari-pinned-tab.svg?v=LbWArJzeO7" color="#5bbad5">
+		<link rel="shortcut icon" href="/favicon.ico?v=LbWArJzeO7">
+		<meta name="apple-mobile-web-app-title" content="Silent Windows - A Mountain Blue Project">
+		<meta name="application-name" content="Silent Windows - A Mountain Blue Project">
+		<meta name="msapplication-TileColor" content="#2b5797">
+		<meta name="theme-color" content="#008080">
+		<meta name="viewport" content="width=device-width, user-scalable=no">
+
+
+	</head>
+	<body>
+		<div class="desktop" style="background-image: url(images/clouds.jpg); background-size: cover; background-position: center;"></div>
+		<div class="taskbar" style="z-index: 5000;">
+			<button class="start-button toggle" title="Click here to begin.">
+				<img src="images/start.png"/><b>Start</b>
+			</button>
+<!--This seems to be for the taskbar so we shall see how it goes-->
+<div class="taskbar-divider"></div>
+<!-- TODO: pinned apps and resizing handles -->
+<div class="tasks"></div>
+<div class="taskbar-divider"></div>
+<div class="tray inset-shallow">
+	<div class="tray-icons">
+		<img class="tray-icon" src="images/icons/task-scheduler-16x16.png" title="Task Scheduler is not ready." onclick="showMessageBox({iconID: 'info', message: 'Good day to you!'})">
+		<img class="tray-icon" src="images/icons/audio-okay-16x16.png" title="Volume" onclick="showMessageBox({iconID: 'info', message: 'Have a wonderful day!'})">
+	</div>
+	<div class="taskbar-time" ondblclick="showMessageBox({iconID: 'info', message: 'Time to get an old clock!'})"></div>
+</div>
+</div>
+<!--this is for messages inside of the taskbar-->
+<div class="start-menu outset-deep" hidden style="display: none; z-index: 5001;">
+	<div class="start-menu-titlebar"></div>
+	<div class="start-menu-content">
+		<button><a href="index.html">Home</a></button><br>
+		<button><a href="fq.htm">FAQ</a></button><br>
+		<button><a href="https://discord.gg/9KkmDQM9Qj">Discord</a></button><br>
+		<button><a href="https://junjin.bandcamp.com/music">Bandcamp</a></button><br>
+		<button><a href="https://www.instagram.com/silentdune">Instagram</a></button><br>
+		<button><a href="https://twitter.com/silenttor">Twitter</a></button><br>
+		<!--<h1 style="font-family: cursive; font-size: 1em;">ANSWER<br>TO ME</h1>-->
+		<img src="https://cdn.discordapp.com/attachments/1039306001087729686/1045846773979152484/miniGif_20221125031123.gif"/>
+	</div>
+</div>
+<!--This is for actually loading the things i want. So lets say for the start menu this is what makes the popup appear-->
+<script src="lib/jquery.min.js"></script>
+<script src="src/Task.js"></script>
+<script src="src/$taskbar-time.js">y</script>
+<script src="src/$start-menu.js">s</script>
+<script src="lib/os-gui/$Window.js"></script>
+<script src="lib/os-gui/MenuBar.js"></script>
+<script src="src/filesystem-setup.js"></script>
+<!--The above seems to be the script that lists things on the main page.
+This file is going to need to be looked at so that we can make sure we can have
+the main page looking spic and span and properly-->
+<script src="src/FolderView.js">l</script>
+<script src="src/FolderViewItem.js"></script>
+<<script src="src/$desktop.js"></script>
+<script src="src/window-switcher.js"></script>
+<script src="src/visualizer-overlay.js"></script>
+<script src="src/programs.js"></script>
+<!--
+<script src="lib/clippy.js/build/clippy.js"></script>
+<script src="lib/konami.js"></script>
+<script src="lib/os-gui/parse-theme.js"></script>
+<script src="src/msgbox.js"></script>
+<script>defaultMessageBoxTitle = "Windows";</script>
+<script src="src/3d-fun.js"></script>
+<script src="src/helpers.js"></script>
+-->
+
+<!--Start Of Desktop "Button" 1-->
+<a href="www.instagram.com" style="color: #ffffff">
+<div class="desktop-icon" draggable="true" tabindex="-1" style="touch-action: none; left: 0px; top: 0px;" data-file-path="undefined">
+<div class="icon-wrapper" style="--icon-size: 32px; --shortcut-icon: url(&quot;https://98.js.org/images/icons/shortcut-32x32.png&quot;);">
+<img class="icon" draggable="false" src="https://98.js.org/images/icons/internet-explorer-32x32.png" width="32" height="32">
+<div class="selection-effect" style="--icon-image: url(&quot;https://98.js.org/images/icons/internet-explorer-32x32.png&quot;);">
+</div>
+</div>
+<div class="title">Internet Explorer</div>
+</div>
+</a>
+<!--End Of Desktop "Button" 1-->
+<!--Start Of Desktop "Button" 2-->
+<a href="https://www.instagram.com" style="color: #ffffff">
+<div class="desktop-icon" draggable="true" tabindex="-1" style="touch-action: none; left: 15px; top: 75px;" data-file-path="undefined">
+<div class="icon-wrapper" style="--icon-size: 32px; --shortcut-icon: url(&quot;https://98.js.org/images/icons/shortcut-32x32.png&quot;);">
+<img class="icon" draggable="false" src="https://98.js.org/images/icons/internet-explorer-32x32.png" width="32" height="32">
+<div class="selection-effect" style="--icon-image: url(&quot;https://98.js.org/images/icons/internet-explorer-32x32.png&quot;);">
+</div>
+</div>
+<div class="title">Instagram</div>
+</div>
+</a>
+<!--End Of Desktop "Button" 2-->
+<!--Start Of Desktop "Button" 3-->
+<div class="desktop-icon" draggable="true" tabindex="-1" style="touch-action: none; left: 5px; top: 150px;" data-file-path="undefined">
+<div class="icon-wrapper" style="--icon-size: 32px; --shortcut-icon: url(&quot;https://98.js.org/images/icons/shortcut-32x32.png&quot;);">
+<img class="icon" draggable="false" src="https://98.js.org/images/icons/my-documents-folder-32x32.png" width="32" height="32">
+<div class="selection-effect" style="--icon-image: url(&quot;https://98.js.org/images/icons/my-documents-folder-32x32.png&quot;);">
+</div>
+</div>
+<div class="title">My Documents</div>
+</div>
+<!--End Of Desktop "Button" 3-->
+<div class="desktop-icon shortcut selected" draggable="true" tabindex="-1" style="touch-action: none; left: 26px; top: 225px;" data-file-path="undefined">
+<div class="icon-wrapper" style="--icon-size: 32px; --shortcut-icon: url(&quot;https://98.js.org/images/icons/shortcut-32x32.png&quot;);">
+<img class="icon" draggable="false" src="https://98.js.org/images/icons/paint-32x32.png" width="32" height="32">
+<div class="selection-effect" style="--icon-image: url(&quot;https://98.js.org/images/icons/paint-32x32.png&quot;);">
+</div>
+</div>
+	<div class="title">Paint</div>
+</div>
+</body>
+</html>
+<!--So We know that there is a div class that deals with desktop icons so -->
