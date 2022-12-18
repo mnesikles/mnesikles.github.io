@@ -82,6 +82,19 @@ body {
     display: block;
     text-align: left;
   }
+  .video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 </style>
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
@@ -269,9 +282,14 @@ MAke the image responsive jfc i want to die-->
     </div>
   </div>
   <div id="showOrHide2" class="window-body">
-    <div class="responsive">
-    <p><iframe width="1094" height="684" src="https://www.youtube.com/embed/G399x-r5ZSw" title="Ep 17: Finn" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></a></p>
-  </div>
+    <p><div class="video-container">
+  <iframe
+    src="https://youtu.be/G399x-r5ZSw"
+    frameborder="0"
+    allow="accelerometer; autoplay; encrypted-media; gyroscope;"
+    allowfullscreen></iframe>
+</div>
+</p>
   </div>
 </div>
 </div>
