@@ -123,6 +123,7 @@ the main page looking spic and span and properly-->
 </div>
 </div>
 	<button type="button" id="files" onclick="show"><div class="title">Paint</button></div>
+	<iframe src="https://jspaint.app" width="100%" height="100%"></iframe>
 		
 </div>
 <!--End of Paint-->
@@ -137,6 +138,12 @@ the main page looking spic and span and properly-->
 <div class="title">Winamp</div>
 </div>
 <!--End of Webamp/Winamp-->
+<script>
+function show() {
+    var iframe1 = document.getElementById('iframe');
+    iframe1.style.display = 'block';
+}
+</script>
 </body>
 </html>
 <!--So We know that there is a div class that deals with desktop icons so -->
