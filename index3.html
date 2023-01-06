@@ -101,7 +101,8 @@ the main page looking spic and span and properly-->
 <div class="selection-effect" style="--icon-image: url(&quot;https://98.js.org/images/icons/internet-explorer-32x32.png&quot;);">
 </div>
 </div>
-<div class="title">Instagram</div>
+<div class="title">
+<>Instagram</div>
 </div>
 </a>
 <!--End Of Desktop "Button" 2-->
@@ -120,9 +121,11 @@ the main page looking spic and span and properly-->
 <img class="icon" draggable="false" src="https://98.js.org/images/icons/paint-32x32.png" width="32" height="32">
 <iframe src="https://jspaint.app" width="100%" height="100%">
 <div class="selection-effect" style="--icon-image: url(&quot;https://98.js.org/images/icons/paint-32x32.png&quot;);">
+<iframe src="https://jspaint.app" width="100%" height="100%">
 </div>
 </div>
-<div class="title">Paint</div>
+<div class="title">
+	<button id="postYourAdd" onclick="postYourAdd()">OPEN</button>Paint</div>
 		
 </div>
 <!--End of Paint-->
@@ -138,9 +141,9 @@ the main page looking spic and span and properly-->
 </div>
 <!--End of Webamp/Winamp-->
 <script>
-function show() {
-    var iframe1 = document.getElementById('iframe');
-    iframe1.style.display = 'block';
+function postYourAdd () {
+    var iframe = $("#pp");
+    iframe.attr("src", iframe.data("src")); 
 }
 </script>
 </body>
