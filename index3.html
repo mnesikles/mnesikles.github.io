@@ -114,16 +114,26 @@ the main page looking spic and span and properly-->
 </div>
 <div class="title">My Documents</div>
 </div>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>
+<script type="text/javascript">
+$(function(){
+    $('#button').click(function(){ 
+        if(!$('#iframe').length) {
+                $('#iframeHolder').html('<iframe id="iframe" src="https://jspaint.app" width="100%" height="100%"></iframe>');
+        }
+    });   
+});
+</script>
+ 
 <!--End Of Desktop "Button" 3-->
 <div class="desktop-icon shortcut selected" draggable="true" tabindex="-1" style="touch-action: none; left: 24px; top: 225px;" data-file-path="undefined">
 <div class="icon-wrapper" style="--icon-size: 32px; --shortcut-icon: url(&quot;https://98.js.org/images/icons/shortcut-32x32.png&quot;);">
-
-<iframe src="https://jspaint.app" width="100%" height="100%">
 <img class="icon" draggable="false" src="https://98.js.org/images/icons/paint-32x32.png" width="32" height="32">
 <div class="selection-effect" style="--icon-image: url(&quot;https://98.js.org/images/icons/paint-32x32.png&quot;);">
 </div>
 </div>
-<div class="title">Paint</div>
+<button id="button">Paint</button>
+<div id="iframeHolder"></div>
 		
 </div>
 </iframe>
