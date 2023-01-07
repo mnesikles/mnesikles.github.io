@@ -4319,13 +4319,6 @@
         "menus.js": null
       }
     },
-    "pinball": {
-      "SpaceCadetPinball.data": null,
-      "SpaceCadetPinball.js": null,
-      "SpaceCadetPinball.wasm": null,
-      "space-cadet-menus.js": null,
-      "space-cadet.html": null
-    },
     "pipes": {
       "LICENSE": null,
       "README.md": null,
